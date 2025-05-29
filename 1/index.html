@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitchの広告をブロックする方法　TTV LOL PRO編</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        a {
+            color: #1a0dab;
+        }
+    </style>
+</head>
+<body>
+    <h1>Twitchの広告をブロックする方法　TTV LOL PRO編</h1>
+
+    <h2>1. TTV LOL PROの使い方ガイド</h2>
+
+    <p>TTV LOL PROは、Twitchのライブストリームから広告をブロックするための便利なツールです。このガイドでは、TTV LOL PROのインストール方法と使用方法について詳しく説明します。</p>
+
+    <h2>2. TTV LOL PROの概要</h2>
+
+    <p>TTV LOL PROは、Twitchの広告を削除するためのブラウザ拡張機能です。無料で利用でき、完全ではないものの、多くの広告を効果的にブロックします。</p>
+
+    <h2>3. インストール方法</h2>
+
+    <h3>Chromeの場合</h3>
+    <ol>
+        <li><strong>ダウンロード</strong>: GitHubの <a href="https://github.com/younesaassila/ttv-lol-pro" target="_blank">リポジトリ</a> からTTV LOL PROのソースコードをダウンロードします。</li>
+        <li><strong>解凍</strong>: ダウンロードしたファイルを解凍します。</li>
+        <li><strong>拡張機能の設定</strong>:
+            <ul>
+                <li>Chromeを開き、アドレスバーに <code>chrome://extensions</code> と入力します。</li>
+                <li>右上の「デベロッパーモード」を有効にします。</li>
+                <li>「未パッケージ化の拡張機能を読み込む」をクリックし、解凍したフォルダを選択します。</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Firefoxの場合</h3>
+    <ol>
+        <li><strong>ダウンロード</strong>: GitHubのリポジトリからTTV LOL PROのソースコードをダウンロードします。</li>
+        <li><strong>拡張機能の設定</strong>:
+            <ul>
+                <li>Firefoxを開き、アドレスバーに <code>about:debugging#/runtime/this-firefox</code> と入力します。</li>
+                <li>「一時的なアドオンを読み込む」をクリックし、ダウンロードしたファイルを選択します。</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Microsoft Edgeの場合</h3>
+    <ol>
+        <li><strong>ダウンロード</strong>: GitHubのリポジトリからTTV LOL PROのソースコードをダウンロードします。</li>
+        <li><strong>解凍</strong>: ダウンロードしたファイルを解凍します。</li>
+        <li><strong>拡張機能の設定</strong>:
+            <ul>
+                <li>Edgeを開き、アドレスバーに <code>edge://extensions</code> と入力します。</li>
+                <li>左下の「デベロッパーモード」をオンにします。</li>
+                <li>「解凍された拡張機能を読み込む」をクリックし、解凍したフォルダを選択します。</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>4. 使用方法</h2>
+
+    <p>TTV LOL PROをインストールした後、特別な設定は必要ありません。Twitchのストリームを視聴する際に、自動的に広告がブロックされます。</p>
+
+    <h3>uBlock Originとの併用</h3>
+
+    <p>TTV LOL PROをさらに効果的に使用するために、uBlock Originと併用することもできます。以下の手順で設定を行います。</p>
+
+    <ol>
+        <li><strong>uBlock Originのインストール</strong>: ChromeまたはFirefoxの拡張機能ストアからuBlock Originをインストールします。</li>
+        <li><strong>フィルターの追加</strong>:
+            <ul>
+                <li>uBlock Originのダッシュボードを開きます。</li>
+                <li>「マイフィルター」タブに移動し、以下のフィルターを追加します。</li>
+            </ul>
+            <pre>
+twitch.tv##+js(twitch-videoad)
+            </pre>
+            <ul>
+                <li>「設定」タブで「私は上級ユーザーです」を有効にし、表示される歯車アイコンをクリックします。</li>
+                <li><code>userResourcesLocation</code> の値を、使用したいスクリプトのURLに変更します。例えば：</li>
+            </ul>
+            <pre>
+userResourcesLocation https://raw.githubusercontent.com/pixeltris/TwitchAdSolutions/master/video-swap-new/video-swap.js
+            </pre>
+        </li>
+    </ol>
+
+    <h2>5. 注意事項</h2>
+
+    <ul>
+        <li>TTV LOL PROは無料で利用できますが、完璧な広告ブロックを保証するものではありません。</li>
+        <li>Twitchの利用規約に違反しないように注意してください。</li>
+    </ul>
+
+    <h2>まとめ</h2>
+
+    <p>TTV LOL PROを使用することで、Twitchの広告を効果的にブロックし、快適な視聴体験を得ることができます。インストールと設定は簡単で、特にuBlock Originとの併用が推奨されます。ぜひ試してみてください。</p>
+
+</body>
+</html>
